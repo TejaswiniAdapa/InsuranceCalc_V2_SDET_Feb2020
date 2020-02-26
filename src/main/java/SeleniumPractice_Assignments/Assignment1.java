@@ -1,4 +1,4 @@
-package SeleniumPractice;
+package SeleniumPractice_Assignments;
 
 import java.util.concurrent.TimeUnit;
 
@@ -67,7 +67,7 @@ public class Assignment1 {
 		}
 		else
 		{
-			System.out.println(" 2nd validation-FAIL");
+			System.out.println("2nd validation-FAIL");
 		}
 		
 		Thread.sleep(1000);
