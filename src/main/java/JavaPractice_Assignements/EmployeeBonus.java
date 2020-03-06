@@ -10,14 +10,14 @@ public class EmployeeBonus {
 		Scanner obj1=new Scanner(System.in);
 		System.out.println("Enter your Salary : ");
 		int sal=obj1.nextInt();
-		Scanner obj2=new Scanner(System.in);
+		
 		System.out.println("Enter your work years : ");
-		int exp_yrs=obj2.nextInt();
+		int exp_yrs=obj1.nextInt();
 		
 		
 		if(exp_yrs>5)
 		{
-			double bonus=0.5*sal;
+			double bonus=0.05*sal;
 			
 			System.out.println("you have received a 5% bonus for your service : "+ bonus);
 		}
