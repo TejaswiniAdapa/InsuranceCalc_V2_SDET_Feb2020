@@ -1,0 +1,23 @@
+package Demo_Selenium_Project;
+
+public class Selenium_Test 
+{
+	//Execution starts with Main method()
+	public static void main(String[] args) 
+	//Test steps to perform
+	
+	/* Step1: Launch the browser
+	 * Step2: Navigate to AUT:"http://www.demo.guru99.com/V4/"
+	 * Step3: Verify the page title
+	 * Step4: Close the Browser
+	*/
+	
+	{
+		//Setup the driver property
+		System.setProperty("webdriver.gecko.driver", )
+		//Step1: Launch the browser
+		
+
+	}
+
+}

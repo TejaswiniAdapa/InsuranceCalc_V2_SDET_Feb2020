@@ -1,0 +1,25 @@
+package JavaPractice_Assignements;
+
+import java.util.Scanner;
+
+public class StudentAttendenceClass {
+
+	public static void main(String[] args) {
+		Scanner obj1=new Scanner(System.in); ////read the data from user
+		System.out.println("No of classes held"); //prompt the user to enter the data
+		int total_classes=obj1.nextInt(); //store the data
+
+		System.out.println("No of classes attended"); //prompt the user to enter the data
+		int atended_classes=obj1.nextInt(); ////store the data in a variable
+		
+		//This is used to find the percentage of attendence
+		float Exam=(atended_classes/100)*total_classes;
+		//The following is used to compare with 75% to allow the student write exam
+		if(Exam>=75)
+		{System.out.println("Student is allowed for writing Exam");}
+		
+		else 
+		{System.out.println("Student is not allowed for writing Exam");}
+	}
+
+}

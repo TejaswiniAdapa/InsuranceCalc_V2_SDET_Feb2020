@@ -1,0 +1,18 @@
+package SeleniumPractice_Assignments;
+
+public class SmartBearLoginPage {
+	
+	/* Test teps to perform the functional testing of Registration Form 
+	 * Step 1: Open Chrome Browser
+	 * Step 2: Navigate to application 'Link'
+	 * Step 3: Click on Login to register
+	 * Step 4: Enter the details mentioned in th Doc
+	 * Step 5: Click on Register
+	 * 
+	 */
+	public static void main(String[] args) {
+		
+
+	}
+
+}

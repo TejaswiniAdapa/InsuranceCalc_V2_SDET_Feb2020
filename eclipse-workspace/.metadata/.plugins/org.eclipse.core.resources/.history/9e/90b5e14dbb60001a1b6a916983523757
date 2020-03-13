@@ -1,0 +1,22 @@
+package JavaPractice_Assignements;
+
+import java.util.Scanner;
+
+public class FactorialLoopExample {
+
+	public static void main(String[] args) {
+		
+		Scanner obj1=new Scanner(System.in);
+		System.out.println("Enter the integer to find the factorial of the Same number");
+		
+		int Fact=obj1.nextInt();
+		
+		for(int i=1;i<Fact;i++)
+		{
+			Fact=Fact*i;
+		}
+		
+		System.out.println("Factorial of : "+ Fact);
+	}
+
+}

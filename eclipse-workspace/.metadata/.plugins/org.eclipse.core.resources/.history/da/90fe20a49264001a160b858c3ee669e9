@@ -1,0 +1,10 @@
+package SeleniumPractice_Assignments;
+
+public class SmartBearLoginPage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

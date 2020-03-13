@@ -1,0 +1,14 @@
+package JavaPractice;
+
+public class Employee1 {
+
+	public static void main(String[] args) {
+		
+		Employee emp=new Employee();
+		
+		emp.setEname("John dane");
+		System.out.println("Name"+emp.getEname());
+
+	}
+
+}

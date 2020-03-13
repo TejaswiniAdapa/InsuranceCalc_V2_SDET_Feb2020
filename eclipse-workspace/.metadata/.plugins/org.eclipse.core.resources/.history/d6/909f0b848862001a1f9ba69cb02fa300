@@ -1,0 +1,25 @@
+package SeleniumPractice_ClassSession;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Register_demowebshop {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		
+		WebDriver driver=new ChromeDriver();
+		driver.get("http://demowebshop.tricentis.com/");
+		Thread.sleep(5000);
+		
+		//finding Gender element by using locator-->'ID'
+		driver.findElement(By.xpath("//a[@href='/register']")).click();
+		driver.findElement(By.id("gender-male")).isSelected();
+		driver.findElement(By.id("gender-female")).isSelected();
+		driver.close();
+	}
+
+}

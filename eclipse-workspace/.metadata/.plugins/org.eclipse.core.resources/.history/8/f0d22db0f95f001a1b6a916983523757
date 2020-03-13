@@ -1,0 +1,39 @@
+package JavaPractice_Assignements;
+
+import java.util.Scanner;
+
+public class FindingAvgUsingLoops {
+	
+	Scanner obj1=new Scanner(System.in);
+	public void MyownMethod()//This method will explain you while loop usage
+	{
+		int i=0;
+		int sum=0;
+		
+		while(i<10)
+		{
+			System.out.println("Enter the integer");
+			sum=sum+obj1.nextInt();
+		}
+		
+		System.out.println("Avg of all entered numbers is"+sum);
+		
+	}
+
+	public static void main(String[] args) {
+		FindingAvgUsingLoops clobj=new FindingAvgUsingLoops();
+		clobj.MyownMethod();
+		
+		//The following steps describes us how to use For Loop
+		Scanner obj2=new Scanner(System.in);
+		int sum=0;
+		for (int i=0;i<=10;i++)		
+		{
+			System.out.println("Enter the number");
+			sum=sum+obj2.nextInt();
+			
+		}
+		System.out.println("Avg of numbers are "+ sum);
+		}
+
+	}

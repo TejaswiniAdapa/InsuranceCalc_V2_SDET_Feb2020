@@ -1,0 +1,10 @@
+package JavaPractice_Assignements;
+
+public class PrintASCII_Values {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

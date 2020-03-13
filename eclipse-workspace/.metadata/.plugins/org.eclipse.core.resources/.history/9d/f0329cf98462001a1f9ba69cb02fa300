@@ -1,0 +1,29 @@
+package JavaPractice_Assignements;
+
+import java.util.Scanner;
+
+public class ReadIntegerfromUserLoop {
+
+
+	public static void main(String[] args) {
+		Scanner obj1=new Scanner(System.in);
+		System.out.println("Enter the numbers to find the Avg using Loop");
+		int num1=obj1.nextInt();
+		String s1=parseInt();
+		int a=0;
+		for(int i=1;i>=1;i++)
+		{
+			
+			if(num1==)
+			{
+				break;
+			}
+			
+			else
+			{
+				a=(a+num1)/i;
+			}
+		}
+	}
+
+}
