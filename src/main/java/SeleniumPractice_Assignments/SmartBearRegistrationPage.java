@@ -45,8 +45,10 @@ public class SmartBearRegistrationPage {
 		driver.findElement(By.id("ConfirmPassword")).sendKeys("ilovebiryani");
 		driver.findElement(By.id("Company")).sendKeys("BiryaniCompany");
 		driver.findElement(By.id("Newsletter")).click();
-		driver.findElement(By.name("register-button")).click();;
+		driver.findElement(By.name("register-button")).click();
 		String Reg_Sucess=driver.findElement(By.xpath("//*[@id=\"content-center\"]/div/div[2]/p")).getText();
+		
+
 		
 		if(Reg_Sucess.equals("Your registration completed"))
 		{

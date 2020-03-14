@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="15002" started-at="2020-03-13T20:37:53 EDT" finished-at="2020-03-13T20:38:08 EDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="15002" started-at="2020-03-13T20:37:53 EDT" finished-at="2020-03-13T20:38:08 EDT">
+      <class name="SeleniumPractice_Assignments.NewRegistrationForm">
+        <test-method status="PASS" signature="Registrationpage()[pri:0, instance:SeleniumPractice_Assignments.NewRegistrationForm@9660f4e]" name="Registrationpage" duration-ms="14948" started-at="2020-03-13T20:37:53 EDT" finished-at="2020-03-13T20:38:08 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Registrationpage -->
+      </class> <!-- SeleniumPractice_Assignments.NewRegistrationForm -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
