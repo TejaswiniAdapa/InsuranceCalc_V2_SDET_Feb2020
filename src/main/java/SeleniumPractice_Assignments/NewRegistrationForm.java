@@ -22,8 +22,8 @@ public class NewRegistrationForm {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.get("http://services.smartbear.com/samples/TestComplete14/smartstore/");
-		driver.findElement(By.xpath("//span[text()='Log in']")).click();
-		driver.findElement(By.xpath("//div[@class='col-12 col-lg-auto']//a")).click();
+		driver.findElement(By.xpath("//nav[@id='menubar-my-account']/div/a/i/following-sibling::span")).click();
+		driver.findElement(By.xpath("//*[@id=\"content-center\"]/div/div[2]/div[2]/div[2]/div/div/a")).click();
 		
 		//now following lines of code is to work with Radio Button
 	//	driver.findElement(By.id("gender-male")).click();//not using becuase we want to make Xpath generic
