@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24804" started-at="2020-03-18T17:45:40 EDT" finished-at="2020-03-18T17:46:05 EDT">
+  <suite name="Default suite" duration-ms="27857" started-at="2020-03-18T17:57:18 EDT" finished-at="2020-03-18T17:57:45 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24804" started-at="2020-03-18T17:45:40 EDT" finished-at="2020-03-18T17:46:05 EDT">
+    <test name="Default test" duration-ms="27857" started-at="2020-03-18T17:57:18 EDT" finished-at="2020-03-18T17:57:45 EDT">
       <class name="SeleniumPractice_Assignments.AutomationTalksRegistration">
-        <test-method status="PASS" signature="Registrationtalks()[pri:0, instance:SeleniumPractice_Assignments.AutomationTalksRegistration@9660f4e]" name="Registrationtalks" duration-ms="24743" started-at="2020-03-18T17:45:40 EDT" finished-at="2020-03-18T17:46:05 EDT">
+        <test-method status="PASS" signature="Registrationtalks()[pri:0, instance:SeleniumPractice_Assignments.AutomationTalksRegistration@9660f4e]" name="Registrationtalks" duration-ms="27813" started-at="2020-03-18T17:57:18 EDT" finished-at="2020-03-18T17:57:45 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Registrationtalks -->

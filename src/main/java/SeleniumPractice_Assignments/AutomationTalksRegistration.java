@@ -196,12 +196,12 @@ public class AutomationTalksRegistration {
 		String page5=driver.getTitle();
 		Assert.assertEquals(page5, "Send Quotation");
 		
-		driver.findElement(By.name("E-Mail")).sendKeys("teja@gmail.com");
+		driver.findElement(By.name("E-Mail")).sendKeys("parupallytejaswini@gmail.com");
 		driver.findElement(By.name("Phone")).sendKeys("5718990009");
 		driver.findElement(By.name("Username")).sendKeys("teja123");
 		driver.findElement(By.name("Password")).sendKeys("Teja@123");
 		driver.findElement(By.name("Confirm Password")).sendKeys("Teja@123");
-		driver.findElement(By.name("Comments")).sendKeys("NA");
+		driver.findElement(By.name("Comments")).sendKeys("This is your insurance quote...please review it");
 		driver.findElement(By.name("Send E-Mail")).click();
 	
 		
