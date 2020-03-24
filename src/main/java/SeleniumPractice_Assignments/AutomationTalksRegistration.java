@@ -186,6 +186,10 @@ public class AutomationTalksRegistration {
 		int row_count=driver.findElements(By.xpath("//table[@id='priceTable']/tbody//tr")).size();
 		int col_count=driver.findElements(By.xpath("//table[@id='priceTable']/tbody//tr[1]/td")).size();
 		
+		/*
+		 * //Please check this lines and let me know if any changes needed in selecting 
+		 * Radio button. I have passed static data.
+		 */
 		String Platinum=driver.findElement(By.xpath("//table[@id='priceTable']/tbody//tr[1]/td[4]")).getText();
 		System.out.println("Option choosed for Price is :"+Platinum);
 		

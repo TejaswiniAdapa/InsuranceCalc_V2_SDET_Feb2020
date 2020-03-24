@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SeleniumPractice_Assignments.AutomationTalksRegistration">
+      <class name="SeleniumPractice_Assignments.Assignment4">
         <methods>
-          <include name="Registrationtalks"/>
+          <include name="Addtask"/>
         </methods>
-      </class> <!-- SeleniumPractice_Assignments.AutomationTalksRegistration -->
+      </class> <!-- SeleniumPractice_Assignments.Assignment4 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
