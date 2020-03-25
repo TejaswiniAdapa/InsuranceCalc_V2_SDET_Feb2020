@@ -5,7 +5,7 @@
     <classes>
       <class name="SeleniumPractice_Assignments.Assignment4">
         <methods>
-          <include name="Addtask"/>
+          <include name="Searchbox"/>
         </methods>
       </class> <!-- SeleniumPractice_Assignments.Assignment4 -->
     </classes>
