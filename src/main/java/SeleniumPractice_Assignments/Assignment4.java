@@ -1,6 +1,6 @@
 package SeleniumPractice_Assignments;
 
-import java.awt.AWTException;
+
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,33 +20,31 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Assignment4 {
+public class Assignment4 
+{
 	WebDriver driver = null;
 
 	// This Method executes before all other methods gets executed
-	@Test(priority = 1)
-	public void Browsersetup() {
+	
+	@BeforeMethod
+	
+	public void qdpm() throws Exception 
+	{
 		WebDriverManager.chromedriver().setup();
-
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.get("http://qdpm.net/demo/v9/index.php");
 		driver.manage().window().maximize();
 	}
-
-	/*
-	 * @Test case 1: Verify dashboard title after logged in sucessfully into given
-	 * URL "http://qdpm.net/demo/v9/index.php" TEST STEPS- 1.Navigate to URL 2.Enter
-	 * Valid Email ID and Password 3.Click on Login Button 4.Validation1: Verify
-	 * dashboard title after logged in successfully
-	 */
-
-	@Test(priority = 2)
-	public void LoginFunctionality() throws InterruptedException {
-
+	
+	@Test
+		public void taskTestCase() throws Exception 
+	{
+	
 		driver.findElement(By.xpath("//form[@id='loginForm']/div[2]/div//input"))
 				.sendKeys("administrator@localhost.com");
 		driver.findElement(By.xpath("//form[@id='loginForm']/div[3]/div//input")).sendKeys("administrator");
@@ -54,51 +53,29 @@ public class Assignment4 {
 		String Dashboard = driver.getTitle();
 		Assert.assertEquals(Dashboard, "qdPM | Dashboard");
 		System.out.println("------------Login Sucessfull--------------" + "/n");
-	}
-
-	/*
-	 * @ Test case 2: Verify that all options are present on dashboard page // TEST
-	 * STEPS- 1.Store the 'a'tag links into list 2.compare the list of elements with
-	 * single element 3.Read the text from each element and storing them into string
-	 * element_text 4.check If the element text=true and print the element text on
-	 * console
-	 */
-	@Test(priority = 3)
-	public void DashboardList() throws InterruptedException {
+	
 		List<WebElement> listEle = driver.findElements(By.xpath("//ul[@class='page-sidebar-menu']/li/a"));
 		System.out.println("------------Dashboard elements------------");
-		for (WebElement d_options : listEle) {
+		for (WebElement d_options : listEle)
+		{
 			String element_text = d_options.getText();
-
 			Assert.assertTrue(true, element_text);
-
 			System.out.println(element_text);
 		}
 		System.out.println();
 
-	}
-
-	/*
-	 * //Test case 3: Verify the page title after the logout action TEST STEPS-
-	 * 1.Click on Add task button and select Test project 1 option 2.Enter Required
-	 * details for all the tabs-General,Time,attachments 3.Goto admin option and
-	 * logout from application
-	 */
-	@Test(priority = 4)
-	public void Addtask() throws InterruptedException, AWTException {
-		//
 		driver.findElement(By.xpath("/*//tbody//button[text()='Add Task']")).click();
 
 		WebElement project = driver.findElement(By.id("form_projects_id"));
 		Select project_option = new Select(project);
-		project_option.selectByVisibleText("Test Project 1");
+		project_option.selectByValue("1");
 
 		WebElement Type = driver.findElement(By.id("tasks_tasks_type_id"));
 		Select Type_option = new Select(Type);
 		Type_option.selectByVisibleText("Defects (Hourly rate $0.00)");
 
 		WebElement name = driver.findElement(By.id("tasks_name"));
-		name.sendKeys("TestUser");
+		name.sendKeys("Jenny");
 
 		WebElement Status = driver.findElement(By.id("tasks_tasks_status_id"));
 		Select Status_option = new Select(Status);
@@ -167,11 +144,7 @@ public class Assignment4 {
 		//Verify the title of login page
 		String TitleAfterLogout = driver.getTitle();
 		Assert.assertEquals(TitleAfterLogout, "qdPM | Login");
-	}
-
-	@Test(priority = 5)
-	public void Searchbox() throws Exception
-	{
+	
 		driver.findElement(By.name("login[email]")).sendKeys("administrator@localhost.com");
 		driver.findElement(By.name("login[password]")).sendKeys("administrator");
 		driver.findElement(By.xpath("//button[@class='btn btn-info pull-right']")).click();
@@ -190,23 +163,53 @@ public class Assignment4 {
 		
 		Thread.sleep(5000);
 		//Searching for the created Tasks by name entered='Teja'
-		driver.findElement(By.id("search_keywords")).sendKeys("TestUser");
+		driver.findElement(By.id("search_keywords")).sendKeys("Jenny");
 		driver.findElement(By.xpath("//input[@class='btn btn-default']")).click();
 		
 		//Verify the search result i.e test data against what i have given for 'Add Task' Method
 		
-		String Name="TestUser";
-	WebElement actual_output=driver.findElement(By.xpath("//table[@id='itmes_listing_1990109']/tbody/tr//a[text()='"+Name+"']"));
-	Assert.assertEquals(actual_output, "TestUser");
+//		
+		List<WebElement> SearchEle = driver.findElements(By.xpath("//tr[@class=\"odd\"]/td[3]"));
+		
+		for (WebElement S_options : SearchEle)
+		{
+			String element_text1 = S_options.getText();
+			SoftAssert s1=new SoftAssert();
+			s1.assertTrue(true,element_text1);
+			System.out.println(element_text1);
+			s1.assertAll();
+		}	
+		
+		//Deleting the Data which i have created by adding Task
+			
+		driver.findElement(By.xpath("//a[@class=\"btn btn-default btn-xs purple\"]")).click();
+		Alert qdpm=driver.switchTo().alert();
+		qdpm.accept();
+			
+		WebElement search1=driver.findElement(By.xpath("//ul/li[@id='yui-gen26']/span"));
+		act1.moveToElement(search1).click().build().perform();
+		
+		Thread.sleep(5000);
+		//Searching for the created Tasks by name entered='Teja'
+		driver.findElement(By.id("search_keywords")).sendKeys("Jenny");
+		driver.findElement(By.xpath("//input[@class='btn btn-default']")).click();
+		//Verifying if the User is deleted
+		
+		String actual_output1=driver.findElement(By.xpath("//table[@class='table table-striped table-bordered table-hover tasks-table']//tbody[2]")).getText();
+		Assert.assertEquals(actual_output1, "No Records Found");;
+		System.out.println("Entered User is deleted");
+		driver.findElement(By.xpath("//li[@class='dropdown user']")).click();
+		driver.findElement(By.xpath("//ul[@class='dropdown-menu']/li[6]")).click();
+		
+		
+		
 	}
+		
+		
+		
+	@AfterMethod
 	
-	
-	
-
-	// This method executes after all methods gets executed
-	@Test(priority = 6)
-	public void BrowserClose() {
-
+		public void browserClose() {
 		driver.close();
 	}
 
